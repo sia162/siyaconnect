@@ -14,6 +14,7 @@
   ],
   "license": "MIT",
   "main": "index.js",
+  "repository": "https://github.com/sia162/siyaconnect",
   "author": {
     "name": "Siya Banodha",
     "email": "nowitissiya@gmail.com"
