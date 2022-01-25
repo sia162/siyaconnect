@@ -1,6 +1,6 @@
 {
   "name": "connectsiya",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "get to know siya~ via `npx connectsiya`",
   "bin": {
     "connectsiya": "index.js"
