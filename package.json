@@ -6,6 +6,7 @@
     "connectsiya": "index.js"
   },
   "dependencies": {
+    "chalk": "^5.0.0",
     "cli-welcome": "^2.2.2"
   },
   "keywords": [
@@ -18,5 +19,6 @@
   "author": {
     "name": "Siya Banodha",
     "email": "nowitissiya@gmail.com"
-  }
+  },
+  "type": "module"
 }

@@ -1,7 +1,16 @@
 #! /usr/bin/env node
+import chalk from "chalk";
+import welcome from "cli-welcome";
+import * as fs from "fs";
+const pkgJSON = JSON.parse(fs.readFileSync("./package.json"));
 
-const pkgJSON = require("./package.json");
-const welcome = require("cli-welcome");
+//variables
+const log = console.log;
+const githubClr = chalk.hex(`#f5f5f5`).bold.inverse;
+const twitterClr = chalk.hex(`#1da1f2`).bold.inverse;
+const mailClr = chalk.hex(`#8AFF8A`).bold.inverse;
+const nameClr = chalk.hex(`#FADC00`).bold;
+const links = chalk.italic.bgGray;
 
 welcome({
   title: pkgJSON.name,
@@ -14,12 +23,12 @@ welcome({
   clear: true,
 });
 
-console.log(`
-SIYA BANODHA
+log(`
+${nameClr(`- SIYA BANODHA -`)}
 
-IT'24 • You can always find me reading books when I'm not getting my laptop burnt with an infinite while loop | ABVIIT Gwalior
-mern | currently doing dsa + trying open source♫
+${chalk.dim(`IT'24 • You can always find me reading books when I'm not getting my laptop burnt with an infinite while loop | ABVIIT Gwalior
+mern | currently doing dsa + trying open source♫`)}
 
-😎 github   - https://github.com/sia162
-🤗 twitter  - https://twitter.com/hexcodesiya
-📧 mail     - siyabanodha@gmail.com`);
+${githubClr(` Github `)}   - ${links(`https://github.com/sia162`)}
+${twitterClr(` Twitter `)}  - ${links(`https://twitter.com/hexcodesiya`)}
+${mailClr(` Mail `)}     - ${links(`siyabanodha@gmail.com`)}`);
