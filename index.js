@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 import chalk from "chalk";
 import welcome from "cli-welcome";
+import sym from "log-symbols";
 import * as fs from "fs";
 const pkgJSON = JSON.parse(fs.readFileSync("./package.json"));
 
@@ -8,8 +9,10 @@ const pkgJSON = JSON.parse(fs.readFileSync("./package.json"));
 const log = console.log;
 const githubClr = chalk.hex(`#f5f5f5`).bold.inverse;
 const twitterClr = chalk.hex(`#1da1f2`).bold.inverse;
-const mailClr = chalk.hex(`#8AFF8A`).bold.inverse;
+const mailClr = chalk.hex(`#FF69B4`).bold.inverse;
 const nameClr = chalk.hex(`#FADC00`).bold;
+const infoClr = chalk.hex("#FFA500");
+const successClr = chalk.green;
 const links = chalk.italic.bgGray;
 
 welcome({
@@ -32,3 +35,8 @@ mern | currently doing dsa + trying open source♫`)}
 ${githubClr(` Github `)}   - ${links(`https://github.com/sia162`)}
 ${twitterClr(` Twitter `)}  - ${links(`https://twitter.com/hexcodesiya`)}
 ${mailClr(` Mail `)}     - ${links(`siyabanodha@gmail.com`)}`);
+
+console.log(`
+${sym.success} ${successClr(` SUCCESS `)}: Thanks for checking out my CLI!);
+${sym.info} ${infoClr(` INFO `)}: I'm working on more CLIs. Drop a follow!
+`);
