@@ -2,8 +2,13 @@
 import chalk from "chalk";
 import welcome from "cli-welcome";
 import sym from "log-symbols";
-import * as fs from "fs";
-const pkgJSON = JSON.parse(fs.readFileSync("./package.json"));
+// import * as fs from "fs";
+// const pkgJSON = JSON.parse(fs.readFileSync("./package.json"));
+
+import { readFile } from "fs/promises";
+const pkgJSON = JSON.parse(
+  await readFile(new URL("./package.json", import.meta.url))
+);
 
 //variables
 const log = console.log;
