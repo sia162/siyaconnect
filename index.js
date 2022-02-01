@@ -1,14 +1,20 @@
 #! /usr/bin/env node
-import chalk from "chalk";
-import welcome from "cli-welcome";
-import sym from "log-symbols";
+// import chalk from "chalk";
+// import sym from "log-symbols";
+// import welcome from "cli-welcome";
+
+const chalk = require("chalk");
+const sym = require("log-symbols");
+const welcome = require("cli-welcome");
+const pkgJSON = require("./package.json");
+
 // import * as fs from "fs";
 // const pkgJSON = JSON.parse(fs.readFileSync("./package.json"));
 
-import { readFile } from "fs/promises";
-const pkgJSON = JSON.parse(
-  await readFile(new URL("./package.json", import.meta.url))
-);
+// import { readFile } from "fs/promises";
+// const pkgJSON = JSON.parse(
+//   await readFile(new URL("./package.json", import.meta.url))
+// );
 
 //variables
 const log = console.log;
